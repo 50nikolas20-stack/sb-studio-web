@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="SB Studio: fotografía y video para XV años, bodas, eventos, sesiones, negocios, impresiones y restauración fotográfica en Ciudad de México.">
+  <title>SB Studio | Tu historia merece ser recordada</title>
+  <style>
+    :root{--bg:#090909;--panel:#121212;--gold:#d8b56b;--gold2:#f2d99c;--white:#f7f4ee;--muted:#b8b3a9}
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} img{max-width:100%;display:block}
+    .wrap{width:min(1160px,92%);margin:auto}
+    header{position:absolute;top:0;left:0;right:0;z-index:3;border-bottom:1px solid #ffffff20}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;gap:24px}
+    .brand{font-family:Georgia,serif;letter-spacing:.13em;font-size:1.35rem;font-weight:bold}.brand span{color:var(--gold)}
+    nav{display:flex;gap:22px;align-items:center;font-size:.86rem;color:#f0eee8}
+    nav a:hover{color:var(--gold2)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 20px;border:1px solid var(--gold);color:#111;background:var(--gold);font-weight:700;letter-spacing:.04em;font-size:.78rem;text-transform:uppercase;transition:.2s}
+    .btn:hover{background:var(--gold2);transform:translateY(-2px)}
+    .btn.ghost{background:transparent;color:var(--white)} .btn.ghost:hover{background:var(--gold);color:#111}
+    .hero{min-height:90vh;display:flex;align-items:center;position:relative;overflow:hidden;background:#171513}
+    .hero-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;z-index:0}
+    .hero:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:0;background:linear-gradient(90deg,rgba(5,5,5,.78) 0%,rgba(5,5,5,.48) 48%,rgba(5,5,5,.12) 100%),linear-gradient(0deg,#090909 0%,transparent 30%)}
+    .hero-content{position:relative;z-index:1;padding:150px 0 100px;max-width:720px}
+    .eyebrow{color:var(--gold2);text-transform:uppercase;letter-spacing:.25em;font-size:.72rem;font-weight:bold}
+    h1,h2,h3{font-family:Georgia,'Times New Roman',serif;font-weight:400;line-height:1.12}
+    h1{font-size:clamp(3.2rem,8vw,6.7rem);margin:18px 0 20px;letter-spacing:-.04em}
+    h1 span{color:var(--gold)}
+    .hero p{font-size:1.12rem;color:#e0ddd6;max-width:520px;margin-bottom:30px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .section{padding:90px 0}.section-head{max-width:650px;margin-bottom:36px}
+    .section h2{font-size:clamp(2.2rem,5vw,3.6rem);margin:10px 0 15px}
+    .section-head p,.muted{color:var(--muted)}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{padding:27px;background:linear-gradient(145deg,#171717,#0e0e0e);border:1px solid #ffffff14;min-height:190px}
+    .service .num{color:var(--gold);font-size:.75rem;letter-spacing:.16em}
+    .service h3{font-size:1.55rem;margin:14px 0 8px}.service p{color:var(--muted);font-size:.94rem;margin:0}
+    .portfolio{background:#101010}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .photo{min-height:220px;position:relative;overflow:hidden;background:linear-gradient(135deg,#29251e,#111);border:1px solid #ffffff16;display:flex;align-items:end;padding:18px}
+    .photo:nth-child(1),.photo:nth-child(4){grid-column:span 7;min-height:330px}
+    .photo:nth-child(2),.photo:nth-child(3){grid-column:span 5}
+    .photo:nth-child(5),.photo:nth-child(6){grid-column:span 6}
+    .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .photo:hover img{transform:scale(1.04)}
+    .photo:after{content:"";position:absolute;inset:30% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.82))}
+    .photo .label{position:relative;z-index:1}.label strong{display:block;font-family:Georgia,serif;font-size:1.35rem;font-weight:400}.label small{color:#e0d5bd;letter-spacing:.1em;text-transform:uppercase;font-size:.65rem}
+    .note{margin-top:18px;font-size:.86rem;color:var(--muted)}
+    .feature{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .feature-art{min-height:390px;background:linear-gradient(135deg,#28231a,#0e0e0e);border:1px solid #ffffff18;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px}
+    .feature-art .monogram{font-family:Georgia,serif;font-size:clamp(5rem,12vw,9rem);color:var(--gold);letter-spacing:-.1em}
+    .feature-art small{display:block;letter-spacing:.4em;color:#fff}
+    .feature h2{font-size:clamp(2.4rem,5vw,3.7rem)} .feature p{color:var(--muted)}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+    .step{border-top:1px solid var(--gold);padding-top:18px}.step b{color:var(--gold);font-size:.75rem;letter-spacing:.15em}.step h3{font-size:1.3rem;margin:8px 0}.step p{color:var(--muted);font-size:.92rem}
+    .cta{background:linear-gradient(120deg,#201b12,#111 60%);text-align:center;padding:78px 0;border-top:1px solid #d8b56b45;border-bottom:1px solid #d8b56b45}
+    .cta h2{font-size:clamp(2.4rem,6vw,4.5rem);max-width:800px;margin:12px auto}.cta p{color:var(--muted);margin:0 auto 28px;max-width:570px}
+    footer{padding:28px 0;color:var(--muted);font-size:.82rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .wa{position:fixed;right:20px;bottom:20px;z-index:10;background:#25d366;color:#071b0d;border-radius:999px;padding:13px 18px;font-weight:bold;box-shadow:0 8px 30px #0008}
+    @media(max-width:760px){nav{display:none}.hero{min-height:80vh;background-position:60% center}.hero-content{padding-top:135px}.services{grid-template-columns:1fr 1fr}.feature{grid-template-columns:1fr;gap:28px}.steps{grid-template-columns:1fr}.photo:nth-child(n){grid-column:span 12;min-height:260px}.section{padding:65px 0}}
+    @media(max-width:480px){.services{grid-template-columns:1fr}.hero-actions .btn{width:100%}.brand{font-size:1.1rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#inicio">SB <span>STUDIO</span></a>
+    <nav aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a><a href="#portafolio">Portafolio</a><a href="#restauracion">Restauración</a><a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn" href="https://wa.me/525540221079?text=Hola%20SB%20Studio%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Cotizar</a>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <img class="hero-image" src="images/portada.jpg" alt="Fotografía de portada de SB Studio" onerror="this.style.display='none'">
+    <div class="wrap hero-content">
+      <div class="eyebrow">Fotografía · Video · Recuerdos</div>
+      <h1>Tu historia merece <span>ser recordada.</span></h1>
+      <p>Capturamos emociones, celebramos momentos y convertimos tus historias en recuerdos que permanecen.</p>
+      <div class="hero-actions">
+        <a class="btn" href="https://wa.me/525540221079?text=Hola%20SB%20Studio%2C%20me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Solicitar cotización</a>
+        <a class="btn ghost" href="#portafolio">Ver portafolio</a>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" id="servicios">
+    <div class="section-head">
+      <div class="eyebrow">Lo que hacemos</div>
+      <h2>Momentos únicos.<br>Recuerdos para siempre.</h2>
+      <p>Un servicio cercano y profesional para contar tu historia, desde las celebraciones más importantes hasta esos recuerdos que quieres recuperar.</p>
+    </div>
+    <div class="services">
+      <article class="service"><div class="num">01 / CELEBRACIONES</div><h3>XV años y bodas</h3><p>Fotografía y video para conservar cada emoción, detalle y momento especial.</p></article>
+      <article class="service"><div class="num">02 / FAMILIA</div><h3>Bautizos y eventos</h3><p>Bautizos, primeras comuniones, cumpleaños y reuniones familiares.</p></article>
+      <article class="service"><div class="num">03 / RETRATOS</div><h3>Sesiones fotográficas</h3><p>Retratos individuales, de pareja y familiares para celebrar quién eres.</p></article>
+      <article class="service"><div class="num">04 / NEGOCIOS</div><h3>Imagen comercial</h3><p>Fotografía y video para presentar productos, espacios y negocios con calidad.</p></article>
+      <article class="service"><div class="num">05 / IMPRESIÓN</div><h3>Impresiones y cuadros</h3><p>Convierte tus imágenes favoritas en piezas para conservar y compartir.</p></article>
+      <article class="service"><div class="num">06 / MEMORIA</div><h3>Restauración fotográfica</h3><p>Recuperación cuidadosa de fotografías antiguas para darles una nueva vida.</p></article>
+    </div>
+  </section>
+  <section class="section portfolio" id="portafolio">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eyebrow">Una mirada a nuestro trabajo</div>
+        <h2>Historias contadas en imágenes.</h2>
+      </div>
+      <div class="gallery">
+        <div class="photo"><img src="images/xv-anos.jpg" alt="Fotografía de XV años" onerror="this.style.display='none'"><div class="label"><small>Celebraciones</small><strong>XV años</strong></div></div>
+        <div class="photo"><img src="images/bodas.jpg" alt="Fotografía de bodas" onerror="this.style.display='none'"><div class="label"><small>Historias de amor</small><strong>Bodas</strong></div></div>
+        <div class="photo"><img src="images/familia.jpg" alt="Fotografía de eventos familiares" onerror="this.style.display='none'"><div class="label"><small>Momentos compartidos</small><strong>Familia</strong></div></div>
+        <div class="photo"><img src="images/sesion.jpg" alt="Sesión fotográfica" onerror="this.style.display='none'"><div class="label"><small>Retratos</small><strong>Sesiones</strong></div></div>
+        <div class="photo"><img src="images/negocios.jpg" alt="Fotografía comercial" onerror="this.style.display='none'"><div class="label"><small>Marcas</small><strong>Negocios</strong></div></div>
+        <div class="photo"><img src="images/restauracion.jpg" alt="Restauración fotográfica" onerror="this.style.display='none'"><div class="label"><small>Recuerdos recuperados</small><strong>Restauración</strong></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap" id="restauracion">
+    <div class="feature">
+      <div class="feature-art"><div><div class="monogram">SB</div><small>STUDIO</small><p style="color:#d8b56b;letter-spacing:.18em;text-transform:uppercase;font-size:.72rem">Tu historia merece ser recordada</p></div></div>
+      <div>
+        <div class="eyebrow">Recuerdos que vuelven a vivir</div>
+        <h2>Hay historias que merecen una segunda oportunidad.</h2>
+        <p>Restauramos fotografías antiguas e imprimimos tus recuerdos para que puedas conservarlos, compartirlos y disfrutarlos por muchos años más.</p>
+        <a class="btn" href="https://wa.me/525540221079?text=Hola%20SB%20Studio%2C%20quiero%20informaci%C3%B3n%20sobre%20restauraci%C3%B3n%20o%20impresi%C3%B3n%20fotogr%C3%A1fica." target="_blank" rel="noopener">Consultar restauración</a>
+      </div>
+    </div>
+  </section>
+  <section class="section wrap">
+    <div class="section-head"><div class="eyebrow">Así trabajamos</div><h2>De tu idea a un recuerdo inolvidable.</h2></div>
+    <div class="steps">
+      <div class="step"><b>PASO 01</b><h3>Cuéntanos tu idea</h3><p>Dinos qué necesitas, la fecha y el lugar de tu evento o proyecto.</p></div>
+      <div class="step"><b>PASO 02</b><h3>Recibe tu cotización</h3><p>Te orientamos sobre las opciones de servicio según tus necesidades.</p></div>
+      <div class="step"><b>PASO 03</b><h3>Conserva el momento</h3><p>Trabajamos para convertir esos instantes en recuerdos que perduren.</p></div>
+    </div>
+  </section>
+  <section class="cta" id="contacto">
+    <div class="wrap">
+      <div class="eyebrow">Hablemos de tu proyecto</div>
+      <h2>El próximo gran recuerdo puede ser el tuyo.</h2>
+      <p>Cuéntanos qué quieres celebrar, fotografiar o restaurar. Estamos listos para ayudarte.</p>
+      <a class="btn" href="https://wa.me/525540221079?text=Hola%20SB%20Studio%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><span class="brand">SB <span>STUDIO</span></span><span>Fotografía y video · Ciudad de México</span><span>© <span id="year"></span> SB Studio</span></div></footer>
+<a class="wa" href="https://wa.me/525540221079?text=Hola%20SB%20Studio%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20informaci%C3%B3n." target="_blank" rel="noopener" aria-label="Contactar a SB Studio por WhatsApp">WhatsApp ↗</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
